@@ -18,11 +18,10 @@
 // @formatter:on
 package net.ladenthin.maven.llamacpp.aiindex;
 
-import de.kherud.llama.InferenceParameters;
-import de.kherud.llama.LlamaModel;
-import de.kherud.llama.LlamaOutput;
-import de.kherud.llama.ModelParameters;
-import de.kherud.llama.Pair;
+import net.ladenthin.llama.InferenceParameters;
+import net.ladenthin.llama.LlamaModel;
+import net.ladenthin.llama.ModelParameters;
+import net.ladenthin.llama.Pair;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,7 +46,8 @@ public class LlamaCppJniAiSummaryProvider implements AiGenerationProvider, AutoC
         final ModelParameters modelParameters = new ModelParameters()
                 .setModel(config.modelPath())
                 .setCtxSize(config.contextSize())
-                .setThreads(config.threads());
+                .setThreads(config.threads())
+                .setChatTemplateKwargs(Collections.singletonMap("enable_thinking", String.valueOf(config.chatTemplateEnableThinking())));
 
         this.model = new LlamaModel(modelParameters);
     }
@@ -66,20 +66,16 @@ public class LlamaCppJniAiSummaryProvider implements AiGenerationProvider, AutoC
 
         final InferenceParameters inferenceParameters = new InferenceParameters("")
                 .setMessages(null, messages)
+                .setUseChatTemplate(true)
                 .setTemperature(temperatureOverride)
                 .setNPredict(config.maxOutputTokens())
                 .setTopP(config.topP())
                 .setTopK(config.topK())
                 .setRepeatPenalty(config.repeatPenalty());
 
-        inferenceParameters.setChatTemplateKwargs(Collections.singletonMap("enable_thinking", String.valueOf(config.chatTemplateEnableThinking())));
         inferenceParameters.setStopStrings(config.stopStrings().toArray(new String[0]));
 
-        final StringBuilder sb = new StringBuilder();
-        for (final LlamaOutput output : model.generateChat(inferenceParameters)) {
-            sb.append(output.text);
-        }
-        return responseNormalizer.normalize(sb.toString());
+        return responseNormalizer.normalize(model.chatCompleteText(inferenceParameters));
     }
 
     @Override

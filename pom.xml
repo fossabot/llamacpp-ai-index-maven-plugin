@@ -58,11 +58,19 @@
 
     </properties>
 
+    <repositories>
+        <repository>
+            <id>github-java-llama</id>
+            <url>https://maven.pkg.github.com/bernardladenthin/java-llama.cpp</url>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
-            <groupId>de.kherud</groupId>
+            <groupId>net.ladenthin</groupId>
             <artifactId>llama</artifactId>
-            <version>4.2.0</version>
+            <version>5.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
