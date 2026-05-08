@@ -35,7 +35,7 @@ import java.util.stream.Stream;
 public class Java8CompatibilityHelper {
 
     /**
-     * Wrapper for {@link String#isBlank()} (Java 11+).
+     * Wrapper for {@code String#isBlank()} (Java 11+).
      * Returns {@code true} if the string is empty or contains only whitespace,
      * {@code false} otherwise.
      *
@@ -48,7 +48,7 @@ public class Java8CompatibilityHelper {
     }
 
     /**
-     * Wrapper for {@link String#formatted(Object...)} (Java 15+).
+     * Wrapper for {@code String#formatted(Object...)} (Java 15+).
      * Equivalent to {@link String#format(String, Object...)}.
      *
      * @param format the format string
@@ -60,7 +60,7 @@ public class Java8CompatibilityHelper {
     }
 
     /**
-     * Wrapper for {@link Files#readString(Path)} (Java 11+).
+     * Wrapper for {@code Files#readString(Path)} (Java 11+).
      * Reads all bytes from a file and decodes them using UTF-8.
      *
      * @param path the path to the file to read
@@ -72,7 +72,7 @@ public class Java8CompatibilityHelper {
     }
 
     /**
-     * Wrapper for {@link Files#writeString(Path, CharSequence, Charset)} (Java 11+).
+     * Wrapper for {@code Files#writeString(Path, CharSequence, Charset)} (Java 11+).
      * Writes a string to a file using the specified charset.
      *
      * @param path    the path to the file to write
@@ -86,7 +86,7 @@ public class Java8CompatibilityHelper {
     }
 
     /**
-     * Wrapper for {@link Stream#toList()} (Java 16+).
+     * Wrapper for {@code Stream#toList()} (Java 16+).
      * Collects stream elements into a {@link List}.
      *
      * @param stream the stream to collect
@@ -98,7 +98,7 @@ public class Java8CompatibilityHelper {
     }
 
     /**
-     * Wrapper for {@link List#of(Object...)} (Java 9+).
+     * Wrapper for {@code List#of(Object...)} (Java 9+).
      * Creates an immutable list containing the specified elements.
      *
      * @param elements the elements to include in the list
