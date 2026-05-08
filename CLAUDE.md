@@ -390,3 +390,21 @@ Summarise what was fixed. If a failure cannot be fixed automatically, stop and a
 4. **Unified indexing and summarization** — each indexer (`SourceFileIndexer`, `PackageIndexer`) both creates the `.ai.md` skeleton and fills in AI fields in a single pass; no separate summarization step is needed.
 5. **Provider abstraction** — AI backends are pluggable through `AiGenerationProvider`; mock provider enables fully deterministic tests.
 6. **Configuration-driven prompts** — prompt templates are defined in POM configuration, not hardcoded in Java; changing a prompt requires no code change.
+
+## Javadoc Conventions
+
+### HTML Entities
+
+In Javadoc comments, never use bare Unicode characters for operators and symbols. Use HTML entities instead:
+
+| Symbol | HTML entity |
+|---|---|
+| `<` | `&lt;` |
+| `>` | `&gt;` |
+| `≤` | `&#x2264;` |
+| `≥` | `&#x2265;` |
+| `→` | `&#x2192;` |
+| `←` | `&#x2190;` |
+| `≠` | `&#x2260;` |
+
+Use numeric hex entities (`&#xNNNN;`) for any Unicode symbol outside ASCII. Named entities (`&lt;`, `&gt;`) are acceptable for `<` and `>`.
