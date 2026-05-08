@@ -313,7 +313,7 @@ public class AiModelDefinition {
      *
      * @param chatTemplateEnableThinking {@code false} passes
      *        {@code enable_thinking=false} to
-     *        {@link de.kherud.llama.InferenceParameters#setChatTemplateKwargs} to suppress
+     *        {@link net.ladenthin.llama.InferenceParameters#setChatTemplateKwargs} to suppress
      *        chain-of-thought reasoning at the Jinja template level
      */
     public void setChatTemplateEnableThinking(final boolean chatTemplateEnableThinking) {

@@ -112,7 +112,7 @@ public class AiGenerationConfig {
      * Default setting for whether the model's chat-template thinking mode is enabled.
      *
      * <p>When enabled, the model uses its own chat-template default for chain-of-thought
-     * reasoning.  When disabled, {@link de.kherud.llama.InferenceParameters#setChatTemplateKwargs}
+     * reasoning.  When disabled, {@link net.ladenthin.llama.InferenceParameters#setChatTemplateKwargs}
      * is called with {@code {"enable_thinking": "false"}} to suppress the thinking block at the
      * Jinja template level — set to {@code false} for Gemma 4 definitions to prevent
      * {@code <|channel>thought} tokens from leaking into stored output.</p>
