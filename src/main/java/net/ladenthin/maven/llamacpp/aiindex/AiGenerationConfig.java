@@ -88,7 +88,7 @@ public class AiGenerationConfig {
 
     /**
      * Default nucleus-sampling probability threshold.
-     * Matches the {@code de.kherud:llama} {@code InferenceParameters} library default so
+     * Matches the {@code net.ladenthin:llama} {@code InferenceParameters} library default so
      * that models which do not declare an explicit value retain the same output distribution
      * as before this field was introduced.
      */
@@ -96,7 +96,7 @@ public class AiGenerationConfig {
 
     /**
      * Default top-k sampling limit.
-     * Matches the {@code de.kherud:llama} {@code InferenceParameters} library default so
+     * Matches the {@code net.ladenthin:llama} {@code InferenceParameters} library default so
      * that models which do not declare an explicit value retain the same output distribution
      * as before this field was introduced.
      */
