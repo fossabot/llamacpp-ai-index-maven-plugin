@@ -208,7 +208,7 @@ k: "parser,codec,markdown"
 
 | Implementation | Description |
 |---|---|
-| `LlamaCppJniAiSummaryProvider` | Uses the `de.kherud:llama` JNI binding to run local GGUF models |
+| `LlamaCppJniAiSummaryProvider` | Uses the `net.ladenthin:llama` JNI binding to run local GGUF models |
 | `MockAiGenerationProvider` | Returns deterministic mock responses; used in all tests |
 
 `AiGenerationProviderFactory` selects the provider by name (`"llamacpp-jni"` or `"mock"`).
@@ -299,7 +299,7 @@ Immutable value types are implemented as Java `record` types (e.g., `AiMdDocumen
 
 | Dependency | Version | Purpose |
 |---|---|---|
-| `de.kherud:llama` | 4.1.0 | llama.cpp JNI binding (GGUF inference) |
+| `net.ladenthin:llama` | 5.0.0 | llama.cpp JNI binding (GGUF inference) |
 | `org.apache.maven:maven-plugin-api` | 3.9.13 | Maven plugin API (provided) |
 | `org.apache.maven.plugin-tools:maven-plugin-annotations` | 3.15.1 | `@Mojo`, `@Parameter` annotations (provided) |
 
