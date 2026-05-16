@@ -12,7 +12,10 @@
 [![Snapshot](https://img.shields.io/badge/snapshot-latest-informational)](https://central.sonatype.com/repository/maven-snapshots/net/ladenthin/llamacpp-ai-index-maven-plugin/)  
 
 **License:**  
-[![License](https://img.shields.io/badge/License-Apache%202.0-orange)](./LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-orange)](./LICENSE)  
+
+**Community:**  
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12863/badge)](https://www.bestpractices.dev/projects/12863)
 
 # llamacpp-ai-index-maven-plugin
 A Maven plugin for generating hierarchical, AI-readable documentation of source code projects using local llama.cpp-compatible models.
