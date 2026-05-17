@@ -36,7 +36,7 @@
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/ladenthin/llamacpp-ai-index-maven-plugin/issues</url>
+        <url>https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/issues</url>
     </issueManagement>
 
     <distributionManagement>
@@ -54,6 +54,8 @@
         <maven.version>3.9.15</maven.version>
 
         <ai.index.output.directory>${project.basedir}/src/site/ai</ai.index.output.directory>
+
+        <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
 
     </properties>
 
@@ -88,6 +90,26 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>io.github.git-commit-id</groupId>
+                <artifactId>git-commit-id-maven-plugin</artifactId>
+                <version>9.0.2</version>
+                <executions>
+                    <execution>
+                        <id>get-git-properties</id>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dateFormat>yyyy-MM-dd'T'HH:mm:ss'Z'</dateFormat>
+                    <dateFormatTimeZone>UTC</dateFormatTimeZone>
+                    <generateGitPropertiesFile>false</generateGitPropertiesFile>
+                    <failOnNoGitDirectory>false</failOnNoGitDirectory>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>

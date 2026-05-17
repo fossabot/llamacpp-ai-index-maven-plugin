@@ -290,8 +290,13 @@ Immutable value types are implemented as Java `record` types (e.g., `AiMdDocumen
 
 | Workflow | Trigger | Purpose |
 |---|---|---|
-| `maven.yml` | Push / PR | Compile and test |
-| `maven-publish.yml` | Release tag | Publish artifact |
+| `publish.yml` | Push, PR, manual dispatch | Unified build/test/coverage/package pipeline; publishes snapshots and Maven Central releases |
+| `codeql.yml` | Schedule / Push | GitHub CodeQL security scanning |
+| `scorecard.yml` | Schedule / Push | OpenSSF Scorecard supply-chain security analysis |
+| `osv-scanner.yml` | Schedule / Push / PR | Google OSV-Scanner dependency vulnerability scan |
+| `reuse.yml` | Push / PR | FSFE REUSE license-compliance check |
+| `claude-code-review.yml` | PR | AI-powered code review |
+| `claude.yml` | Issue/PR comment with `@claude` | Claude Code interactive assistant |
 
 ---
 
