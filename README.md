@@ -1,5 +1,6 @@
 **Build:**  
 ![Java 8+](https://img.shields.io/badge/Java-8%2B-informational)  
+![JUnit](https://img.shields.io/badge/tested%20with-JUnit4-yellow)  
 [![Publish](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/actions/workflows/publish.yml/badge.svg)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/actions/workflows/publish.yml)  
 [![CodeQL](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/actions/workflows/codeql.yml/badge.svg)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/actions/workflows/codeql.yml)  
 
@@ -13,7 +14,18 @@ Only `streambuffer` runs PIT (with a 100% mutation-coverage gate).
 Do not add a PIT badge here unless PIT is wired into pom.xml + CI.
 -->
 
+**Quality:**  
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=bernardladenthin_llamacpp-ai-index-maven-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=bernardladenthin_llamacpp-ai-index-maven-plugin)  
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=bernardladenthin_llamacpp-ai-index-maven-plugin&metric=code_smells)](https://sonarcloud.io/dashboard?id=bernardladenthin_llamacpp-ai-index-maven-plugin)  
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=bernardladenthin_llamacpp-ai-index-maven-plugin&metric=security_rating)](https://sonarcloud.io/dashboard?id=bernardladenthin_llamacpp-ai-index-maven-plugin)  
+
 **Security:**  
+<!--
+Coverity Scan is not configured for this repository.
+Only `streambuffer` is registered (project 5453). To enable here, register
+the project at https://scan.coverity.com/ and add a badge using the assigned
+ID: [![Coverity Scan Build Status](https://scan.coverity.com/projects/<ID>/badge.svg)](https://scan.coverity.com/projects/<ID>)
+-->
 [![Known Vulnerabilities](https://snyk.io/test/github/bernardladenthin/llamacpp-ai-index-maven-plugin/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/bernardladenthin/llamacpp-ai-index-maven-plugin?targetFile=pom.xml)  
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbernardladenthin%2Fllamacpp-ai-index-maven-plugin.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbernardladenthin%2Fllamacpp-ai-index-maven-plugin?ref=badge_shield)  
 [![Dependencies](https://img.shields.io/librariesio/github/bernardladenthin/llamacpp-ai-index-maven-plugin)](https://libraries.io/github/bernardladenthin/llamacpp-ai-index-maven-plugin)  
@@ -30,6 +42,7 @@ Do not add a PIT badge here unless PIT is wired into pom.xml + CI.
 
 **Community:**  
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12863/badge)](https://www.bestpractices.dev/projects/12863)  
+[![Contribute with Gitpod](https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)  
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/badge)](https://scorecard.dev/viewer/?uri=github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)  
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-success?logo=dependabot)](./.github/dependabot.yml)  
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org/en/v1.0.0/)  
@@ -39,7 +52,9 @@ Do not add a PIT badge here unless PIT is wired into pom.xml + CI.
 [![Maintained?](https://isitmaintained.com/badge/resolution/bernardladenthin/llamacpp-ai-index-maven-plugin.svg)](https://isitmaintained.com/project/bernardladenthin/llamacpp-ai-index-maven-plugin)  
 [![Issues](https://img.shields.io/github/issues/bernardladenthin/llamacpp-ai-index-maven-plugin)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/issues)  
 [![Pull Requests](https://img.shields.io/github/issues-pr/bernardladenthin/llamacpp-ai-index-maven-plugin)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/pulls)  
-[![GitHub Stars](https://img.shields.io/github/stars/bernardladenthin/llamacpp-ai-index-maven-plugin?style=social)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/bernardladenthin/llamacpp-ai-index-maven-plugin?style=social)](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/stargazers)  
+[![Treeware](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Treeware&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees)](https://treeware.earth)  
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
 # llamacpp-ai-index-maven-plugin
 A Maven plugin for generating hierarchical, AI-readable documentation of source code projects using local llama.cpp-compatible models.
