@@ -36,7 +36,7 @@
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/ladenthin/llamacpp-ai-index-maven-plugin/issues</url>
+        <url>https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin/issues</url>
     </issueManagement>
 
     <distributionManagement>

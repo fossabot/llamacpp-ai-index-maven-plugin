@@ -51,8 +51,8 @@ The plugin runs in two phases.
 Represents a document consisting of a structured metadata header and a markdown body. Ensures non-null invariants and encapsulates AI-generated content.
 ```
 ## Requirements
-- Java 21+
-- Maven 3.6+
+- Java 8+ (production code targets Java 8; CI builds on Java 8 via temurin)
+- Maven 3.6.3+
 - Local GGUF model (llama.cpp compatible)
 
 ## Dependency
